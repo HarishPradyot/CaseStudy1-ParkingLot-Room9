@@ -1,6 +1,6 @@
-package Floor;
+package floor;
 
-public class CommonFloor implements floor{//the class implements the method of floor interface
+public class CommonFloor implements Floor{//the class implements interface floor
 
 	private boolean []motorcycle;//boolean array to show motorcycle spots
 	private boolean []electric;//boolean array to show electric car spots

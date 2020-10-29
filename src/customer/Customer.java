@@ -1,9 +1,8 @@
-package Customer;
+package customer;
 
 import java.util.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;  
-import java.time.LocalDateTime;
 public class Customer{
 
 	private String vehicleType;//vehicle type of the customer
@@ -23,6 +22,7 @@ public class Customer{
 	Map<Integer,String> preferences;//map to associate the preference type in integer to preference type in String form
 
 	private LocalDateTime entryTime;//entry time of customer
+	private String ticket;
 	
 	public Customer(String vehicleType, int ID, int preference) {//constructor to initialize the customer attributes
 		
@@ -45,20 +45,23 @@ public class Customer{
 	}
 
 	public void showTicket() {//display the ticket of the customer
-		System.out.println("\n////////////////////////////////////////////");
-		System.out.println("Customer ID: " + ID);
-		System.out.println("Vehicle Type : " + vehicleType);
-		System.out.println("Preference Type : " + preferences.get(preference));
-		System.out.println("Slot Number: " + slotIndex);
-		System.out.println("FloorNumber: " + floorNumber);
-		System.out.println("PaymentStatus: " + ((paymentStatus) ? "Done" : "Not Done"));
-		System.out.println("PaymentFee: " + ((paymentStatus) ? "Not Applicable yet" : paymentFee));
-		System.out.print("Entry Time : ");
-		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
-		LocalDateTime now = LocalDateTime.now();  
-		System.out.println(dtf.format(now)); 
-		System.out.println("Charge : " + ((chargeOpted) ? "Opted" : "Not Opted"));
-		System.out.println("////////////////////////////////////////////\n");
+		if(!paymentStatus)
+		{
+			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+			LocalDateTime now = LocalDateTime.now();  
+			ticket=
+					"\nCustomer ID: " + ID + "\nVehicle Type: " + vehicleType + "\nPreference Type: " + preferences.get(preference)
+					+"\nSlot Number: " + slotIndex + "\nFloorNumber: " + floorNumber + "\nEntry Time: " + dtf.format(now);
+			if(preference==3)
+				ticket+=("\nCharge: " + ((chargeOpted) ? "Opted" : "Not Opted"));
+			System.out.println("\n////////////////////////////////////////////"+ticket+"\n////////////////////////////////////////////\n");
+		}
+		else
+		{
+			System.out.println("PaymentStatus: Done");
+			System.out.println("PaymentFee: " + paymentFee+"\n");
+			ticket="\n////////////////////////////////////////////"+ticket+"\nPaymentStatus: Done"+"\nPaymentFee: " + paymentFee + "\n////////////////////////////////////////////\n";
+		}
 	}
 
 	public int getID() {//get the ID of the customer
@@ -111,5 +114,8 @@ public class Customer{
 	public double getPaymentFee() {// get the payment fee of the customer
 		return paymentFee;
 	}
-	
+	public String getTicket()
+	{
+		return ticket;
+	}
 }

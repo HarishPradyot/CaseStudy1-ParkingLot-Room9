@@ -1,6 +1,6 @@
-package Floor;
+package floor;
 
-public class TruckFloor implements floor {//truck floor class
+public class TruckFloor implements Floor {//truck floor class
 	
 	private boolean []truck;//spots for parking trucks
 	

@@ -1,0 +1,22 @@
+
+////////////////////////////////////////////
+Customer ID: 1
+Vehicle Type: MotorCycle
+Preference Type: MotorCycle
+Slot Number: 1
+FloorNumber: 1
+Entry Time: 2020/10/29 00:03:15
+PaymentStatus: Done
+PaymentFee: 10.0
+////////////////////////////////////////////
+
+////////////////////////////////////////////
+Customer ID: 2
+Vehicle Type: Van
+Preference Type: Large
+Slot Number: 1
+FloorNumber: 2
+Entry Time: 2020/10/29 00:03:33
+PaymentStatus: Done
+PaymentFee: 30.0
+////////////////////////////////////////////

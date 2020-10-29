@@ -1,9 +1,9 @@
-package Payment;
+package payment;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
 
-public class Payment implements pay {//implements pay interface
+public class Payment implements paymentInterface {//implements pay interface
 
 	private double rate;//rate of the chosen vehicle type
 	private LocalDateTime entry;//entry time of the customer
