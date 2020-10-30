@@ -22,7 +22,7 @@ public class Log {
 	public Log()
 	{
 		try {
-			file=new File("AccessLog.txt");
+			file=new File("./../AccessLog.txt");
 			fin=new Scanner(file);
 			fout=new FileWriter(file,true);
 			

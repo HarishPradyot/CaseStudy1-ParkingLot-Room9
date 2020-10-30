@@ -34,7 +34,7 @@ class Admin {
 	Admin(){// constructor for administrator class
 
 		try {
-            File file = new File("Input.txt");//writing the basic properties of parking lot such as number of floors,
+            File file = new File("./../Input.txt");//writing the basic properties of parking lot such as number of floors,
             //number of spots for a vehicle etc.
             fin = new Scanner(file);
         }
