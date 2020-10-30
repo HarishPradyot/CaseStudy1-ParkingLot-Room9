@@ -24,7 +24,9 @@ NAMAN SHARMA                CS19B029
 SINGH SAGAR BHUPENDRA       CS19B038
 M HARISH PRADYOT            CS19B047
 
-File dependency : Directory should contain file named "input.txt" containing number of spots and rates for each spot.
+Note : Due to some reason the file "Input.txt" is being displayed as "input.txt" in the repo, however, it is different in my local repository but I had pushed with the correct file name. Thus while cloning if you find it to be "input.txt", then please change the filename to "Input.txt".
+
+File dependency : Directory should contain file named "Input.txt" containing number of spots and rates for each spot.
 	If the admin wishes to make any change to the system please modify input.txt file.
 	Order of input inside "input.txt" : numberOfFloors
 					    numberOfTruckSpots
